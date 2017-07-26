@@ -1,0 +1,38 @@
+<style type="text/css">
+    md-backdrop.md-opaque.md-default-theme, md-backdrop.md-opaque {
+        background-color: transparent !important;
+    }
+    #bodyContent p {
+         font-weight: 400;
+     }
+
+</style>
+<div ng-app="MapsApp" ng-controller="AppCtrl">
+
+<div layout="row" flex >
+    <md-sidenav class="md-sidenav-right" md-whiteframe="4" md-component-id="right"
+                md-disable-backdrop >
+        <md-toolbar class="md-theme-indigo" >
+            <h1 class="md-toolbar-tools">[[title.marker]]</h1>
+        </md-toolbar>
+
+        <md-content layout-margin>
+            <section layout="row">
+                <md-list layout="column" layout-padding >
+                    <md-list-item class="md-3-line" ng-repeat="project in MarkerProjects track by project.id" style=" padding-top: 10px; padding-bottom: 10px">
+                        <img ng-src="[[project.thumbnail]]" class="md-avatar" alt="[[project.title]]">
+                        <div class="md-list-item-text">
+                            <a href="[[project.permalink]]" title="[[project.title]]" target="_blank">
+                                <h3 style="white-space: pre-wrap;" ng-bind-html="project.title"></h3>
+                            </a>
+                            <p ng-bind-html="project.content" ></p>
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </section>
+        </md-content>
+    </md-sidenav>
+
+</div>
+<div id="map" style="width:100%; height:480px"></div>
+</div>

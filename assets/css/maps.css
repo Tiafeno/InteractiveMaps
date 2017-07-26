@@ -1,0 +1,49 @@
+body{
+    font-family: 'Trirong', serif;
+    font-weight: 200 !important;
+    position : initial !important;
+    overflow: hidden;
+}
+a{
+  text-decoration: none;
+}
+.material-icons {
+    display: block;
+}
+
+md-sidenav {
+   width: 500px;
+}
+
+@media screen and (min-width: 600px){
+     md-sidenav {
+        max-width: 500px;
+     }
+}
+
+@media screen and (max-width: 456px){
+    md-list-item.md-2-line .md-list-item-text h3,
+    md-list-item.md-2-line > .md-no-style .md-list-item-text h3,
+    md-list-item.md-3-line .md-list-item-text h3,
+    md-list-item.md-3-line > .md-no-style .md-list-item-text h3{
+        white-space: normal;
+    }
+}
+
+md-sidenav.md-sidenav-right{
+    z-index: 999;
+}
+
+h1{
+    color: white;
+}
+
+#dialog-maps{
+    position: fixed;
+    z-index: 99999;
+    left:50%;
+    width : 450px;
+}
+.md-select-menu-container{
+    z-index: 999999;
+}

@@ -1,6 +1,6 @@
 <?php
 namespace interactiveMaps\Controller;
 
-abstract class MapsController {
+abstract class PluginsController {
   public function __construct() {}
 }
